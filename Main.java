@@ -1,12 +1,20 @@
-public class Main{
-    public static void main(String[] args) {
-        int[] numbers = {1,2,3,4,5};
-        int max = numbers[0];
-        for (int i = 1; i < numbers.length; i++) {
-            if (numbers[i] > max){
-                max = numbers[i];
+import java.util. *;
+public class Main {
+        public static void main(String[] args) {
+                    int[] array = {1, 2, 3, 4, 2, 1, 5, 5, 6, 7, 8, 8};
+                    List<Integer> list = new ArrayList<>();
+                    for (int element : array) {
+                        list.add(element);
+                    }
+                    Set<Integer> uniqueSet = new LinkedHashSet<>(list);
+                    int[] uniqueArray = new int[uniqueSet.size()];
+                    int index = 0;
+                    for (int element : uniqueSet) {
+                        uniqueArray[index++] = element;
+                    }
+
+                    for (int element : uniqueArray) {
+                        System.out.print(element + " ");
+                    }
+                }
             }
-        }
-        System.out.println(max);
-    }
-}
